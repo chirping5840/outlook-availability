@@ -3,7 +3,7 @@
  * ===================================================================== */
 
 // Application (client) ID from your Azure AD app registration
-const CLIENT_ID = "REPLACE-WITH-YOUR-CLIENT-ID";
+const CLIENT_ID = "2c0383d0-39d9-4a01-8c6e-487037cbfcce";
 
 // Use "common" for any work/school account, "organizations" for any work account,
 // or your tenant ID (GUID) to lock to one organization.
