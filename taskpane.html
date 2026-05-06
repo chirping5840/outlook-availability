@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Availability Inserter</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+  <script src="https://alcdn.msauth.net/browser/2.38.3/js/msal-browser.min.js"></script>
+  <link rel="stylesheet" href="taskpane.css">
+</head>
+<body>
+  <div id="container">
+    <h1>Insert availability</h1>
+
+    <section id="auth-section">
+      <p>Sign in to read your calendar.</p>
+      <button id="signin-btn" type="button">Sign in</button>
+      <p id="auth-status" class="status"></p>
+    </section>
+
+    <section id="main-section" class="hidden">
+      <h2>Pick days</h2>
+      <div id="calendar-grid" aria-label="Date picker"></div>
+      <p id="selected-summary" class="muted">No days selected</p>
+
+      <details>
+        <summary>Options</summary>
+        <div class="options">
+          <label>
+            <input type="checkbox" id="use-mailbox-hours" checked>
+            Use my Outlook working hours (recommended)
+          </label>
+          <div class="row">
+            <label>Start
+              <input type="time" id="work-start" value="09:00">
+            </label>
+            <label>End
+              <input type="time" id="work-end" value="17:00">
+            </label>
+          </div>
+          <label>Minimum slot (minutes)
+            <input type="number" id="min-slot" value="30" min="15" step="15">
+          </label>
+          <label>Time format
+            <select id="time-format">
+              <option value="auto" selected>Match my locale</option>
+              <option value="12h">12-hour (3:30 PM)</option>
+              <option value="24h">24-hour (15:30)</option>
+            </select>
+          </label>
+        </div>
+      </details>
+
+      <div class="actions">
+        <button id="generate-btn" type="button">Generate &amp; insert</button>
+        <button id="copy-btn" type="button" class="secondary">Copy to clipboard</button>
+      </div>
+      <p id="status" class="status"></p>
+
+      <h3>Preview</h3>
+      <pre id="preview" class="preview">(nothing yet)</pre>
+    </section>
+  </div>
+
+  <script src="taskpane.js"></script>
+</body>
+</html>

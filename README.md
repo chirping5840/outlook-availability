@@ -1,1 +1,2 @@
-# outlook-availability
+# Outlook add-in
+
