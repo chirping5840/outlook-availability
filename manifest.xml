@@ -7,7 +7,7 @@
     xsi:type="MailApp">
 
   <!-- Replace with a NEW GUID. PowerShell: [guid]::NewGuid()  or  uuidgen on Mac/Linux -->
-  <Id>00000000-0000-0000-0000-000000000000</Id>
+  <Id>465f4c56-73e5-4ddd-8fa0-4127fad27633</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Your Name</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
