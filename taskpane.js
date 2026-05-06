@@ -32,7 +32,7 @@ Office.onReady(() => {
       authority: `https://login.microsoftonline.com/${TENANT}`,
       redirectUri: window.location.origin + window.location.pathname
     },
-    cache: { cacheLocation: "sessionStorage" }
+    cache: { cacheLocation: "localStorage" }
   });
 
   document.getElementById("signin-btn").addEventListener("click", signIn);
